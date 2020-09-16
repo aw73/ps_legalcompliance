@@ -996,7 +996,7 @@ class Ps_LegalCompliance extends Module
             $cms_page_shipping_and_payment = $cms_role_repository->findOneByName(self::LEGAL_SHIP_PAY);
             $link = $this->context->link->getCMSLink((int) $cms_page_shipping_and_payment->id_cms);
 
-            $this->context->smarty->assign(array('link' => $link));
+            $this->context->smarty->assign(array('linktarget' => $link));
             return $this->display(__FILE__, 'hookDisplayCartPriceBlock_shipping_details.tpl');
         }
     }
